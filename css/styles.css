@@ -100,3 +100,9 @@ button {
     box-shadow: 0px 0px 5px skyblue;
     color: white;
 }
+white{
+    background-color: beige;
+    color:floralwhite;
+    box-shadow: 0px 0px 5px floralwhite;
+    font-size: 15px;
+}
