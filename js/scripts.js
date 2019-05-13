@@ -63,7 +63,7 @@ $("#hold1").click(function(event) {
 $("#hold2").click(function(event) {
     event.preventDefault();
     if ($('.diceRoll1').is(':visible')) {
-         Player1.hold();
+         Player1.hold1();
          $('.rollScore1').empty();
          $('.finalScore1').empty();
          $('.finalScore1').append("Score for "+Player1.name+" is: " + Player1.total);
@@ -72,14 +72,14 @@ $("#hold2").click(function(event) {
          $('.diceRoll1').toggle();
          Player1.winner();
        } else {
-   Player2.hold();
-   $('.rollScore2').empty();
-   $('.finalScore2').empty();
-   $('.finalScore2').append("Score for "+Player2.name+" is: " + Player2.total);
-   $(".overallScore2").empty();
-   $('.diceRoll2').toggle();
-   $('.diceRoll1').toggle();
-   Player2.winner();
- }
+        Player2.hold2();
+        $('.rollScore2').empty();
+        $('.finalScore2').empty();
+        $('.finalScore2').append("Score for "+Player2.name+" is: " + Player2.total);
+        $(".overallScore2").empty();
+        $('.diceRoll2').toggle();
+        $('.diceRoll1').toggle();
+        Player2.winner();
+      }
 });
-});
+'});
