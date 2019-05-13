@@ -1,5 +1,8 @@
 body{
     background-image: url("../images/icon.jpg");
+    background-size: cover;
+    position: relative;
+
     
 }
 .container{

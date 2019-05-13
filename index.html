@@ -54,57 +54,57 @@
 
             <div class="col4">
                 <h1>PLAYERS</h1>
-                  <form id="rollDice" class="form-inline">
+                  <form id="rollDice" class="">
                 <div class="row">
                     <div class="col-md-6">
                       <h3>Player1</h3>
-                      <label for="Player1">Player1</label>
+                      <label for="Player1">:</label>
                       <input type="text" required id = 'Player1'>
                       </div>
                     </div>
+                    
                     <div class="col-md-6">
                     <h3>Player2</h3>
-                    <label for="Player2">Player2</label>
+                    <label for="Player2">:</label>
                     <input type="text" required id = 'Player2'>
                     <br>
                     <br>
                   </div>
+                </div>
                     <button type="submit" id="submit" class="btn btn-success" name="button">Register</button>
                   </form>
                   
-            </div>
+           
 
             <h1>ROLL the Dice!!</h1>
             <div class="Gameplay">
               <div class="row">
                 <div class="col-md-6">
-                  <div class="col5">
+                  <div class="col5" id="content1">
                       <h3 class="Pl1"></h3>
-                      <p>Roll: <span class="diceRoll1"></span></p>
-                       <p>Roll Score: <span class="rollScore1"></span></p>
-                       <p>Overall Score: <span class="overallScore1"></span></p>
+                      
+                       <p>Roll Score: <span id="rollScore1"></span></p>
+                       <p>Overall Score: <span id="overallScore1"></span></p>
                        <p>Total Score: <span class="finalScore1"></span></p>
                   </div>
                        <div class="white">
-                            <button class="roll1 btn">ROLL</button>
-                            <button id="hold1 ">HOLD</button>
+                            <button id="roll">ROLL</button>
+                            <button id="hold ">HOLD</button>
                         </div>
 
                 </div>
 
 
                 <div class="col-md-6">
-                <div class="col6">
+                <div class="col5" id="content2">
                       <h3 class="Pl2"></h3>
-                      <p>Roll: <span class="diceRoll2"></span></p>
-                      <p>Roll Score: <span class="rollScore2"></span></p>
-                      <p>Overall Score: <span class="overallScore2"></span></p>
+                     
+                      <p>Roll Score: <span id="rollScore2"></span></p>
+                      <p>Overall Score: <span id="overallScore2"></span></p>
                        <p>Total Score: <span class="finalScore2"></span></p>
                 </div>
-                      <div class="white">
-                          <button class="roll2 btn">ROLL</button>
-                          <button id="hold2">HOLD</button>
-                      </div>
+                      
+                      <div id="image-die"></div>
 
                </div>
                </div>
