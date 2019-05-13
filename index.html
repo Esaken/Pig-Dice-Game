@@ -54,17 +54,19 @@
 
             <div class="col4">
                 <h1>PLAYERS</h1>
+                  <form id="rollDice" class="form-inline">
                 <div class="row">
                     <div class="col-md-6">
                       <h3>Player1</h3>
                       <label for="Player1">Player1</label>
-                      <input type="text" required id = 'player1Name'>
+                      <input type="text" required id = 'Player1'>
                       </div>
                     </div>
                     <div class="col-md-6">
                     <h3>Player2</h3>
                     <label for="Player2">Player2</label>
-                    <input type="text" required id = 'player2Name'>
+                    <input type="text" required id = 'Player2'>
+                  </form>
                   </div>
             </div>
 
@@ -72,38 +74,41 @@
             <div class="Gameplay">
               <div class="row">
                 <div class="col-md-6">
-                    <div class="coll">
-                        <h5 class="header5">PLAYER 1</h5>
-                        <p align="left"><span class="rolldice">ROLL:</span></p>
-                        <p align="left"><span class="roundscore">ROUND SCORE:</span></p>
-                        <p align="left"><span class="totalscore1">TOTAL SCORE:</span></p>
-                          <button class="rbtn1"> ROLL </button>
-                          <button class="hbtn1"> HOLD </button>
-                 </div>
-  
-  
+                  <div class="col5">
+                      <h3 class="P21"></h3>
+                      <p>Roll: <span class="diceRoll1"></span></p>
+                       <p>Roll Score: <span class="rollScore1"></span></p>
+                       <p>Overall Score: <span class="overallScore1"></span></p>
+                  </div>
+                       <div class="white">
+                            <button class="roll1 btn">ROLL</button>
+                            <button id="hold1 ">HOLD</button>
+                        </div>
+
+                </div>
+
+
                 <div class="col-md-6">
                 <div class="col6">
-                    <h6 class="header6">PLAYER 2</h6>
-                    <p align="left"><span class="rolldice2">ROLL:</span></p>
-                    <p align="left"><span class="roundscore2">ROUND SCORE:</span></p>
-                    <p align="left"><span class="totalscore2">TOTAL SCORE:</span></p>
-                      <button class="rbtn2"> ROLL </button>
-                      <button class="hbtn2"> HOLD </button>
-                  </div>  
+                      <h3 class="Pl2"></h3>
+                      <p>Roll: <span class="diceRoll2"></span></p>
+                      <p>Roll Score: <span class="rollScore2"></span></p>
+                      <p>Overall Score: <span class="overallScore2"></span></p>
                 </div>
-                      
+                      <div class="white">
+                          <button class="roll2 btn">ROLL</button>
+                          <button id="hold2">HOLD</button>
                       </div>
-  
+
                </div>
                </div>
             </div>
-           
+
 <div class="col7">
   <form action="">
-      <input class="Reset" type="reset" value="RESET"<br/>
+ <input class="Reset" type="reset" value="RESET"<br/>
   </form>
- 
+
 </div>
 
 
@@ -114,7 +119,7 @@
 
 
 
-
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
 </div>
   </body>
@@ -122,4 +127,3 @@
     designed by Esau
   </footer>
 </html>
-
