@@ -48,7 +48,7 @@ function reset(){
 $(document).ready(function(){
 
 
-$("#rolDice").submit(function (event) {
+$("#rollDice").submit(function (event) {
   event.preventDefault();
   num++
   if (num >2 ){
@@ -57,7 +57,7 @@ $("#rolDice").submit(function (event) {
     num = 0;
     console.log(playerDetails);
     reset();
-  } 
+  }
 
   var inputtedName = $("#player").val();
   var newPLayer = new PlayersInfo(inputtedName, 0, 0);
@@ -68,11 +68,7 @@ $("#rolDice").submit(function (event) {
 
 });
 $("#roll").click(function () {
-  if (num == 2) {
-      var switchPlayer;
-      var getRandom = genRandom();
-      var getPlayerId = playerDetails[pos];
-      getPlayerId.AddScores(getRandom);
+  
       if (getRandom == 1 && pos == 0) {
           $("#content" + (pos + 1) + " #rollScore").text("0");
           $("#content" + (pos + 1)).removeClass("player-turn");
@@ -83,7 +79,7 @@ $("#roll").click(function () {
           // alert("Oooops, You rolled a 1. " + switchPlayer.playerNames + "'s turn");
           $("#content" + (pos + 1)).addClass("player-turn");
       } else if (getRandom == 1 && pos == 1) {
-          $("#content" + (pos + 1) + " h4").text("0");
+          $("#content" + (pos + 1) + " #rollScore").text("0");
           $("#content" + (pos + 1)).removeClass("player-turn");
           $("#image-die").html("");
           pos = 0;
@@ -98,13 +94,7 @@ $("#roll").click(function () {
           $("#image-die").html("<img class='dice' height='200' width = '200' src=" + getDieSide(getRandom) + ">")
       }
       console.log(getRandom + " " + pos + " " + newMark);
-  } else if (num == 1) {
-      alert("Player 2 Name Required");
-      $("#input-details").modal();
-  } else if (num == 0) {
-      alert("Players' Names Required");
-      $("#input-details").modal();
-  }
+  
 });
 $("#hold").click(function () {
   if (num == 2) {
@@ -114,8 +104,8 @@ $("#hold").click(function () {
       finalScore = getPlayerId.totalScores;
       console.log(finalScore);
       getPlayerId.playerMarks = 0;
-      $("#content" + (pos + 1) + " h4").text("0");
-      $("#content" + (pos + 1) + " h1").text(finalScore);
+      $("#content" + (pos + 1) + "#rollScore").text("0");
+      $("#content" + (pos + 1) + " #overallScore").text(finalScore);
       $("#image-die").html("");
       if (pos == 0) {
           $("#content" + (pos + 1)).removeClass("player-turn");
